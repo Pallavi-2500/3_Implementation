@@ -11,12 +11,12 @@ int main(){
 
     double bmi = calcBMI();
 	double bmr = calcBMR();
-    printf("bmi = %d bmr = %d",bmi,bmr);
+    printf("bmi = %lf bmr = %lf\n",bmi,bmr);
     printf("Enter your Choice \n1. Workout Plan\n2. Water Intake Plan\n3. Diet control Plan\n4. Complete Plan\n");
     
-    char choice;
+    int choice;
     fflush(stdin);
-    scanf("%c",&choice);
+    scanf("%d",&choice);
     switch(choice){
         case 1:
             workout(bmi);

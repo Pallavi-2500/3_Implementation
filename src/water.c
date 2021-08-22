@@ -93,5 +93,5 @@ void displaymemberdetails( struct member *p, int n)
 	}
 	printf("Weight: %f\n",(p+n)->w);
 	printf("Workout duration: %d:%d\n",(p+n)->time[0],(p+n)->time[1]);
-	printf("Recomended Water-intake: %f\n",(p+n)->total_w);
+	printf("Recomended Water-intake: %0.1f litres\n",(p+n)->total_w);
 }

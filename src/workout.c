@@ -3,17 +3,13 @@
 #include<math.h>
 #include<workout.h>
 
-
 float bmi , reduce_weight,total_calories;
 int choice ,select; 
 char store_string[1000];
-
 int no_of_days;
+
 void workout(float bmi)
 {
-    /*printf("enter bmi value\n");
-    scanf("%f",&bmi);
-    */
     if(bmi<18.5)  // underweight
     {
         printf("You are Underweight\n");
@@ -31,12 +27,12 @@ void workout(float bmi)
     {
         printf("You are over weight\n");
         printf("Healthy BMI range should be 18.6 to 24.9\n");
-        printf("Please enter how many kilos you wish to reduce\n");
+        printf("Please enter how many kilos you wish to reduce?\n");
         scanf("%f" , &reduce_weight);
         if(reduce_weight==0)
         {
-            sprintf(store_string,"First step to lose Weight. Get and stay active!""\n"
-            "Thank you""\n");
+            sprintf(store_string,"Glad to know, you're happy in your body! Stay active and healthy!""\n"
+            "Thank you for stopping by!""\n");
             printf("%s",store_string);
         }
         else if(reduce_weight>=1 && reduce_weight<=20)
@@ -119,7 +115,7 @@ void beginner()
     "Squats(low intensity)   25 min              100""\n"
     "Push-ups                20 count            140""\n"
     "=================================================================""\n"
-    "Please follow the workout plans for %d days to reduce %f Calories\n\n",no_of_days,total_calories);
+    "Please follow the workout plans for %d days to reduce %0.2f Calories\n\n",no_of_days,total_calories);
     printf("%s",store_string);
     
     
@@ -137,7 +133,7 @@ void intermediate()
     "Push-ups                20 count            140""\n"
     "Threadmill              60 min              700""\n"
     "=================================================================""\n"
-    "Please follow the workout plans for %d days to reduce %f Calories\n\n",no_of_days,total_calories);
+    "Please follow the workout plans for %d days to reduce %0.2f Calories\n\n",no_of_days,total_calories);
     printf("%s",store_string);
 
 }
@@ -156,6 +152,6 @@ void advanced()
     "Burpees                 60 min              680""\n"
     
     "=================================================================""\n"
-    "Please follow the workout plans for %d days to reduce %f Calories\n\n",no_of_days,total_calories);
+    "Please follow the workout plans for %d days to reduce %0.2f Calories\n\n",no_of_days,total_calories);
     printf("%s",store_string);
 }
